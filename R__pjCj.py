@@ -13,7 +13,7 @@ class Result:
         return 'Success!\n'\
             f'Objective Value: {self.obj}\n'\
             'Configurations:\n' + '\n'.join([
-                f'Machine {x[0]}, Weight {x[2]}, Config ' + np.binary_repr(x[1]).rjust(self.ins.getTuple()[1], '0') for x in self.ass
+                f'Machine {x[0]}, Weight {x[2]}, Config ' + np.binary_repr(x[1]).rjust(self.ins.getTuple()[1], '0')[::-1] for x in self.ass
             ])
 
 class Instance:
